@@ -1,3 +1,5 @@
+/* variaveis*/
+
 let index = 0;
 let bike = document.querySelectorAll('.bike');
 let elementColor = document.querySelector('.image');
@@ -29,7 +31,7 @@ function bikeInfo(index){
 
 
 
-
+/*muda a cor de fundo*/
 function changeColor(index){
     if(index ==0){
         elementColor.style.setProperty("--primary-color","#b4f2fb");
@@ -40,17 +42,21 @@ function changeColor(index){
     }
 }
 
+
+/*faz a mensagem aparecer*/
 function showPopup(){
     let popup = document.getElementById('popup');
         popup.classList.toggle('show');
 
     
 }
-
+/*faz a mensagem desaparecer*/
 function removerPopup(){
     let popup = document.getElementById('popup');
     popup.classList.remove('show');
 }
+
+/*muda a bicicleta*/
 
 function next(){
     bike[index].classList.remove('active');
@@ -59,6 +65,8 @@ function next(){
     changeColor(index);
     bikeInfo(index);
 }
+
+/*volta a bicicleta*/
 
 function anterior(){
     bike[index].classList.remove('active');
